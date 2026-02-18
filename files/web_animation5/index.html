@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no"> 
+<meta name="ad.size" content="width=300,height=250">
+<meta charset="UTF-8">
+<meta name="authoring-tool" content="Adobe_Animate_CC">
+<style>
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+html {
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+   -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    /*Universal box sizing with inheritance */
+    box-sizing: border-box;
+}
+body {
+	border: 0;
+  outline: 0;
+	margin: 0;
+	padding: 0;
+	background-color: #FFFFFF;	
+}
+#banner {
+	position: relative;
+	width: 300px;
+  height: 250px;
+	-moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+	user-select: none;
+	-webkit-tap-highlight-color: rgba(0,0,0,0);
+	cursor: pointer;
+	overflow: hidden;
+	border: 1px solid black;
+  visibility: hidden;
+}
+</style>
+<script>
+var clickTag = "https://google.com",
+	canvas, 
+	stage, 
+  exportRoot;
+function init() {
+	canvas = document.getElementById("canvas");
+	var comp=AdobeAn.getComposition("B9F16AC89811454FA9D496F4D4501395");
+	var lib=comp.getLibrary();
+	createjs.MotionGuidePlugin.install();
+	var loader = new createjs.LoadQueue(false);
+	loader.addEventListener("fileload", function(evt){handleFileLoad(evt,comp)});
+	loader.addEventListener("complete", function(evt){handleComplete(evt,comp)});
+	var lib=comp.getLibrary();
+	loader.loadManifest(lib.properties.manifest);
+}
+function handleFileLoad(evt, comp) {
+	var images=comp.getImages();	
+	if (evt && (evt.item.type == "image")) { images[evt.item.id] = evt.result; }	
+}
+function handleComplete(evt,comp) {
+//this function is always called, irrespective of the content. 
+// You can use the variable "stage" after it is created in token create_stage
+	var lib=comp.getLibrary();
+	var ss=comp.getSpriteSheet();
+	var queue = evt.target;
+	var ssMetadata = lib.ssMetadata;
+	for(i=0; i<ssMetadata.length; i++) {
+		ss[ssMetadata[i].name] = new createjs.SpriteSheet( {"images": [queue.getResult(ssMetadata[i].name)], "frames": ssMetadata[i].frames} )
+	}
+	exportRoot = new lib.PS_Vue_Standard_World_Cup_Eng_HTML_300x250();
+	stage = new lib.Stage(canvas);
+	stage.enableMouseOver();
+//enable mouseover events for buttons and movieclips by default
+stage.enableMouseOver();
+//set to true to ensure display objects are positioned on whole pixels
+stage.snapToPixelEnabled = false;
+//falls back to TIMEOUT if the requestAnimationFrame API is not supported. 
+createjs.Ticker.timingMode = createjs.Ticker.RAF_SYNCHED;	
+//registers the "tick" event listener
+fnStartAnimation = function() {
+		stage.addChild(exportRoot);
+		createjs.Ticker.setFPS(lib.properties.fps);
+		createjs.Ticker.addEventListener("tick", stage);
+	}	    
+//uncomment this token to enable Animate's native support for hi-dpi screens and responsive scaling
+	function makeResponsive(isResp, respDim, isScale, scaleType) {		
+		var lastW, lastH, lastS=1;		
+		window.addEventListener('resize', resizeCanvas);		
+		resizeCanvas();		
+		function resizeCanvas() {			
+			var w = lib.properties.width, h = lib.properties.height;			
+			var iw = window.innerWidth, ih=window.innerHeight;			
+			var pRatio = window.devicePixelRatio || 1, xRatio=iw/w, yRatio=ih/h, sRatio=1;			
+			if(isResp) {                
+				if((respDim=='width'&&lastW==iw) || (respDim=='height'&&lastH==ih)) {                    
+					sRatio = lastS;                
+				}				
+				else if(!isScale) {					
+					if(iw<w || ih<h)						
+						sRatio = Math.min(xRatio, yRatio);				
+				}				
+				else if(scaleType==1) {					
+					sRatio = Math.min(xRatio, yRatio);				
+				}				
+				else if(scaleType==2) {					
+					sRatio = Math.max(xRatio, yRatio);				
+				}			
+			}			
+			canvas.width = w*pRatio*sRatio;			
+			canvas.height = h*pRatio*sRatio;
+			canvas.style.width = w*sRatio+'px';				
+			canvas.style.height = h*sRatio+'px';
+			stage.scaleX = pRatio*sRatio;			
+			stage.scaleY = pRatio*sRatio;			
+			lastW = iw; lastH = ih; lastS = sRatio;            
+			stage.tickOnUpdate = false;            
+			stage.update();            
+			stage.tickOnUpdate = true;		
+		}
+	}
+	makeResponsive(false,'both',false,1); 
+	AdobeAn.compositionLoaded(lib.properties.id);
+	fnStartAnimation();
+}
+</script>
+</head>
+<body onload="init();">
+	<div id="banner">
+		<canvas id="canvas" width="300" height="250" style="position: absolute; display: block; background-color:rgba(255, 255, 255, 1.00);">
+		</canvas>	
+    </div>
+   <script>
+    var clickTag = "https://www.someURL.com";
+    var banner = document.getElementById('banner');
+    banner.addEventListener('click', bannerHandler);
+    function bannerHandler()
+    {
+      window.open(window.clickTag);
+    }
+  </script>
+  <script src="https://s0.2mdn.net/ads/studio/cached_libs/createjs_2015.11.26_54e1c3722102182bb133912ad4442e19_min.js"></script>
+  <script src="https://s0.2mdn.net/ads/studio/cached_libs/tweenmax_1.19.0_643d6911392a3398cb1607993edabfa7_min.js"></script>
+<!-- adobe animate CC FLA JS 
+<script src="PS_Vue_Standard_World_Cup_Eng_HTML_300x250.js"></script> -->
+<script src="PS_Vue_Standard_World_Cup_Eng_HTML_300x250.js?1527087603718"></script>
+</body>
+</html>

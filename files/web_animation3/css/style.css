@@ -1,0 +1,215 @@
+.banner {
+  width: var(--width);
+  height: var(--height);
+  border: 1px solid var(--primary);
+  background: var(--white);
+  overflow: hidden;
+  box-sizing: border-box;
+  font-family: var(--family);
+}
+
+.size {
+  top: -1px;
+  left: -1px;
+  width: var(--width);
+  height: var(--height);
+}
+
+.retina {
+  background-size: contain !important;
+  background-repeat: no-repeat !important;
+}
+
+.hide {
+  opacity: 0;
+}
+
+.ff_pos {
+  top: 5px !important;
+  left: -17px !important;
+}
+
+#btn-exit {
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  opacity: 0;
+}
+
+/*///////////////////COPY1///////////////////*/
+#copy1_1 {
+  background: url(../img/copy1_1.png);
+}
+
+#copy1_2 {
+  background: url(../img/copy1_2.png);
+}
+
+
+/*///////////////////COPY2///////////////////*/
+#copy2_1 {
+  background: url(../img/copy2_1.png);
+}
+
+#copy2_2 {
+  background: url(../img/copy2_2.png);
+}
+
+
+/*///////////////////COPY3///////////////////*/
+#copy3_1 {
+  background: url(../img/copy3_1.png);
+}
+
+#copy3_2 {
+  background: url(../img/copy3_2.png);
+}
+
+
+/*///////////////////COPY4///////////////////*/
+#copy4_1 {
+  background: url(../img/copy4_1.png);
+}
+
+#copy4_2 {
+  background: url(../img/copy4_2.png);
+}
+
+#copy5 {
+  background: url(../img/copy5.png);
+}
+
+#wave {
+  background: url(../img/bg.jpg);
+  transform-origin: 0px 125px;
+}
+
+#warning {
+  background: url(../img/warnings.png);
+}
+
+#device1_container {}
+
+#device1 {
+  background: url(../img/device1.png);
+  transform-origin: 390px 868px;
+}
+
+#device2 {
+  background: url(../img/device2.png);
+}
+
+#device3 {
+  background: url(../img/device3.png);
+}
+
+#device4 {
+  background: url(../img/device4.png);
+
+}
+
+#cta {
+  background: url(../img/cta.png);
+  opacity: 0;
+}
+
+#icon {
+  background: url(../img/icon.png);
+  top: -6px ;
+  left: 56px ;
+  transform-origin: 93px 116px;
+  transform: scale(0.39);
+}
+
+#iqos {
+  background: url(../img/logo_IQOS.png);
+}
+
+#boxes {
+  overflow: hidden;
+  top: 0px;
+}
+
+
+#msk1 {
+  overflow: hidden;
+  clip-path: polygon(23% 63%, 52% 64%, 54% 71%, 24% 71%);
+  /* background-color: red;
+  opacity: .8; */
+  top: -4px;
+  left: 0px;
+
+}
+
+#msk2 {
+  overflow: hidden;
+  clip-path: polygon(24% 59%, 52% 59%, 54% 64%, 23% 63%);
+  /* background-color: red;
+  opacity: .8; */
+  top: -3px;
+  left: 0px;
+}
+
+#msk3 {
+  overflow: hidden;
+  clip-path: polygon(24% 54%, 49% 54%, 50% 59%, 23% 58%);
+  /* background-color: red;
+  opacity: .8; */
+  top: -2px;
+  left: 0px;
+}
+
+#msk4 {
+  overflow: hidden;
+  clip-path: polygon(25% 49%, 50% 49%, 49% 54%, 26% 54%);
+  /* background-color: red;
+  opacity: .8; */
+  top: -1px;
+  left: 0px;
+}
+
+
+#msk5 {
+  overflow: hidden;
+  clip-path: polygon(25% 34%, 47% 34%, 48% 50%, 25% 50%);
+  /* background-color: red;
+  opacity: .8; */
+  top: 0px;
+  left: 0px;
+}
+
+
+#box1 {
+  background: url(../img/boxes.png);
+  top: 0px;
+  left: 0px;
+}
+
+#box2 {
+  background: url(../img/boxes.png);
+  top: 0px;
+  left: 0px;
+}
+
+
+#box3 {
+  background: url(../img/boxes.png);
+  top: 0px;
+  left: 0px;
+
+}
+
+
+#box4 {
+  background: url(../img/boxes.png);
+  top: 0px;
+  left: 0px;
+}
+
+
+#box5 {
+  background: url(../img/boxes.png);
+  top: 0px;
+  left: 0px;
+
+}

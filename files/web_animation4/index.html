@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Banner</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+<meta name="ad.size" content="width=300,height=250">
+<meta name="format-detection" content="telephone=no">
+    <style>
+      :root {
+        --primary: #333;
+        --secondary: #e1dcdc;
+        --white: #fff;
+        --width: 300px;
+        --height: 250px;
+        --half: calc(min(var(--width), var(--height)) * .5);
+        --family: Arial, Helvetica, sans-serif;
+        --base: 12px;
+      }
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      div {
+        position: absolute;
+      }
+      #loader {
+        width: var(--width);
+        height: var(--height);
+        display: grid;
+        align-items: center;
+        justify-items: center;
+      }
+      #loader::before {
+        content: '';
+        border: 5px solid #afafb7;
+        border-radius: 50%;
+        width: var(--half);
+        height: var(--half);
+        max-width: 60px;
+        max-height: 60px;
+      }
+      #loader::after {
+        content: '';
+        position: absolute;
+        border: 3px solid #afafb7;
+        border-top-color: white;
+        border-radius: 50%;
+        animation: spinner 1s linear infinite;
+        width: var(--half);
+        height: var(--half);
+        padding: 1px;
+        max-width: 60px;
+        max-height: 60px;
+      }
+      @keyframes spinner {
+          from {
+              transform: rotate(0deg);
+          }
+          to {
+              transform: rotate(-360deg);
+          }
+      }
+      .banner {
+        display: none;
+      }
+    </style>
+<script type="text/javascript">
+        var clickTag1 = "https://apretude.com/about-apretude/what-is-apretude",
+            clickTag2 = "https://gskpro.com/content/dam/global/hcpportal/en_US/Prescribing_Information/Apretude/pdf/APRETUDE-PI-PIL-IFU.PDF#page=36",
+            clickTag3 = "https://www.fda.gov/safety/medwatch-fda-safety-information-and-adverse-event-reporting-program",
+            clickTag4 = "https://gskpro.com/content/dam/global/hcpportal/en_US/Prescribing_Information/Apretude/pdf/APRETUDE-PI-PIL-IFU.PDF";
+    </script>
+</head>
+
+<body>
+<div id="loader" class='loader'></div>
+<div class="banner" id="banner" style="display: none">
+    <div id="background">
+      <div id="bg" class="size retina"></div>
+      <div id="svgContainer" class="size retina">
+        <svg id="svgCircles" version="1.1" viewBox="0 0 300 250" x="0px" y="0px" width="300" height="250" xmlns="http://www.w3.org/2000/svg" style="enable-background:new 0 0 300 250;" xml:space="preserve">
+          <defs>
+            <filter id="blur"><feGaussianBlur in="SourceGraphic" stdDeviation="2"></feGaussianBlur></filter>
+            <filter id="blur2"><feGaussianBlur in="SourceGraphic" stdDeviation="8"></feGaussianBlur></filter>
+            <filter id="blur3"><feGaussianBlur in="SourceGraphic" stdDeviation="10"></feGaussianBlur></filter>
+            <style type="text/css">
+              .line1{fill:none;stroke:#F15861;stroke-width:15;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;filter:blur(2px)}
+  `         </style>
+          </defs>
+          <circle id="circle1"  class="circles" r="8" cx="73" cy="17" fill="#fefef0" filter="url(#blur)" opacity=".2"></circle>
+          <circle id="circle2"  class="circles" r="8" cx="138" cy="30" fill="#fefef0" filter="url(#blur)" opacity=".2"></circle>
+          <circle id="circle3"  class="circles" r="8" cx="225" cy="30" fill="#fefef0" filter="url(#blur)" opacity=".2"></circle>
+          <circle id="circle4"  class="circles" r="8" cx="232" cy="47" fill="#fefef0" filter="url(#blur)" opacity=".2"></circle>
+          <circle id="circle5"  class="circles" r="8" cx="83" cy="61" fill="#fefef0" filter="url(#blur)" opacity=".2"></circle>
+          <circle id="circle6"  class="circles" r="8" cx="147" cy="56" fill="#fefef0" filter="url(#blur)" opacity=".2"></circle>
+          <circle id="circle7"  class="circles" r="7" cx="268" cy="65" fill="#fefef0" filter="url(#blur)" opacity=".2"></circle>
+          <circle id="circle8"  class="circles" r="7" cx="280" cy="60" fill="#fefef0" filter="url(#blur)" opacity=".2"></circle>
+          <circle id="circle9"  class="circles" r="10" cx="262" cy="109" fill="#fefef0" filter="url(#blur)" opacity=".2"></circle>
+          <circle id="circle10" class="circles"  r="8" cx="23" cy="73" fill="#fefef0" filter="url(#blur)" opacity=".2"></circle>
+          <circle id="circle11" class="circles"  r="8" cx="53" cy="83" fill="#fefef0" filter="url(#blur)" opacity=".2"></circle>
+          <circle id="circle12" class="circles"  r="8" cx="73" cy="83" fill="#fefef0" filter="url(#blur)" opacity=".2"></circle>
+          <circle id="circle13" class="circles"  r="6" cx="111" cy="79" fill="#fefef0" filter="url(#blur)" opacity=".2"></circle>
+          <circle id="circle14" class="circleRed" r="17" cx="117" cy="63" fill="#f36c56" filter="url(#blur)" opacity=".2" ></circle>
+          <circle id="circle15" class="circleRed" r="17" cx="40" cy="70" fill="#f36c56" filter="url(#blur)" opacity=".2" ></circle>
+          <circle id="circle16" class="circleRed" r="17" cx="125" cy="23" fill="#f36c56" filter="url(#blur)" opacity=".2" ></circle>
+          <circle id="circle17" class="circleRed" r="17" cx="158" cy="0" fill="#f36c56" filter="url(#blur)" opacity=".2" ></circle>
+          <circle id="circle18" class="circleRed" r="20" cx="228" cy="6" fill="#f36c56" filter="url(#blur2)" opacity=".2" ></circle>
+          <circle id="circle19" class="circleRed" r="17" cx="250" cy="70" fill="#f36c56" filter="url(#blur)" opacity=".2" ></circle>
+          <circle id="circle20" class="circleRed" r="12" cx="294" cy="64" fill="#f36c56" filter="url(#blur)" opacity=".2" ></circle>
+          <circle id="circle21" class="circleRed" r="17" cx="275" cy="35" fill="#f36c56" filter="url(#blur)" opacity=".2" ></circle>
+          <circle id="circle22" class="circleRed" r="23" cx="117" cy="130" fill="#4bc8dc" filter="url(#blur2)" opacity=".2"></circle>
+          <circle id="circle23" class="circleRed" r="15" cx="87" cy="100" fill="#ff0000" filter="url(#blur2)" opacity=".2"></circle>
+          <path id="roof" class="line1" d="M133.7,101.6c0,0-2,0.8-2-4.2v-5.1l-14.4,0.6l-0.6,9c0,0-17.5,2.8-29.4-9.9l-2.8,3.4c0,0,6.8,4,4,7.9
+  s-9.3,8.8-9.3,8.8s-9.3-4-7.3,4s7.9,4.2,7.9,4.2l48.3,0.8" opacity=".1"/>
+          
+        </svg>
+      </div>
+    </div>
+	<div id="copy1_1" class="size retina f1"></div>
+	<div id="copy1_2" class="size retina f1"></div>
+  <div id="disclaimer1" class="size retina"></div>
+  <div id="copy2" class="size retina f2"></div>
+	<div id="logo1" class="size retina"></div>
+	<div id="logo2" class="size retina"></div>
+  <div id="copy3" class="size retina"></div>
+  <div id="cta" class="size retina"></div>
+  <div id="btn-exit"></div>
+  <div id="pi"></div>
+  <div id="patient"></div>
+      <div id="isi-container">
+        <div id="isi">
+          <h1>IMPORTANT SAFETY INFORMATION</h1>
+          <h2>What is the most important thing I should know about APRETUDE?</h2>
+          <p><b>Important information for people who receive APRETUDE for pre-exposure prophylaxis (PrEP) to help reduce their risk of getting human immunodeficiency virus-1 (HIV-1) infection: </b></p>
+          <p><b>Before receiving APRETUDE to reduce your risk of getting HIV-1, you must be HIV-1 negative to start APRETUDE. Do not receive APRETUDE unless you are tested and confirmed to be HIV-1 negative.</b></p>
+          <ul>
+              <li><b>Some HIV-1 tests can miss HIV-1 infection in a person who has recently become infected.</b> Tell your healthcare provider if you had a flu-like illness within the last month before starting or at any time while receiving APRETUDE. Symptoms of new HIV-1 infection include: tiredness; joint or muscle aches; sore throat; rash; enlarged lymph nodes in the neck or groin; fever; headache; vomiting or diarrhea; or night sweats</li>
+          </ul>
+          <p><b>While you are receiving APRETUDE for HIV-1 PrEP:</b></p>
+          <ul>
+              <li>
+                <b>APRETUDE does not prevent other sexually transmitted infections (STIs). Practice safer sex by using a latex or polyurethane condom to reduce the risk of getting STIs</b>
+              </li>
+              <li>
+                <b>You must stay HIV-1 negative to keep receiving APRETUDE for HIV-1 PrEP</b>
+                <ul>
+                    <li>Know your HIV-1 status and the HIV-1 status of your partners. If you think you were exposed to HIV-1, tell your healthcare provider right away</li>
+                    <li>Your risk of getting HIV-1 is lower if your partners with HIV-1 are taking effective treatment</li>
+                    <li>Get tested for HIV-1 with each APRETUDE injection or when your healthcare provider tells you. You should not miss any HIV-1 tests. If you become HIV-1 infected and continue receiving APRETUDE because you do not know you are HIV-1 infected, the HIV-1 infection may become harder to treat</li>
+                    <li>Get tested for other STIs. These infections make it easier for HIV-1 to infect you</li>
+                    <li>Talk to your healthcare provider about ways to reduce your HIV-1 risk</li>
+                    <li>Do not miss any injections of APRETUDE. Missing injections increases your risk of getting HIV-1 infection</li>
+                </ul>
+              </li>
+          </ul>
+          <h2>Who should not receive APRETUDE?</h2>
+          <p><b>Do not receive APRETUDE if you:</b></p>
+          <ul>
+              <li>
+                <b>already have HIV-1 or do not know your HIV-1 status.</b> If you are HIV-1 positive, you need to take other medicines to treat HIV-1. APRETUDE can only help reduce your risk of getting HIV-1 infection <b>before</b> you are infected. <b>If you have HIV-1 and receive only APRETUDE, over time, your HIV-1 may become harder to treat</b>
+              </li>
+              <li>are allergic to cabotegravir</li>
+              <li>are taking certain medicines: carbamazepine; oxcarbazepine; phenobarbital; phenytoin; rifampin; or rifapentine</li>
+          </ul>
+          <h3>What are the possible side effects of APRETUDE?</h3>
+          <p><b>APRETUDE may cause serious side effects:</b></p>
+          <ul>
+              <li>
+                <b>Allergic reactions.</b> Call your healthcare provider right away if you develop a rash with APRETUDE. <b>Stop receiving APRETUDE and get medical help right away if you develop a rash with any of the following signs or symptoms:</b> fever; generally ill feeling; tiredness; muscle or joint aches; trouble breathing; blisters or sores in mouth; blisters; redness or swelling of the eyes; swelling of the mouth, face, lips, or tongue
+              </li>
+              <li>
+                <b>Liver problems.</b> Liver problems have happened in people with or without a history of liver problems or other risk factors. <b>Call your healthcare provider right away if you have any of the following symptoms:</b> your skin or the white part of your eyes turns yellow; dark or &ldquo;tea-colored&rdquo; urine; light-colored stools; nausea or vomiting; loss of appetite; pain, aching, or tenderness on the right side of your stomach area; or itching
+              </li>
+              <li>
+                <b>Depression or mood changes. Call your healthcare provider or get emergency medical help right away if you develop any of the following symptoms:</b> feeling sad or hopeless; feeling anxious or restless; have thoughts of hurting yourself (suicide) or have tried to hurt yourself
+              </li>
+          </ul>
+          <p><b>The most common side effects of APRETUDE include:</b></p>
+          <ul>
+              <li>Pain, tenderness, hardened mass or lump, swelling, bruising, redness, itching, warmth, loss of sensation at the injection site, abscess, and discoloration; diarrhea; headache; fever; tiredness; sleep problems; nausea; dizziness; passing gas; stomach pain; vomiting; muscle pain; rash; loss of appetite; drowsiness; back pain; or upper respiratory infection</li>
+              <li>These are not all the possible side effects of APRETUDE. Call your healthcare provider for medical advice about side effects</li>
+          </ul>
+          <h3>Before receiving APRETUDE, tell your healthcare provider about all your medical conditions, including if you:</h3>
+          <ul>
+              <li>have ever had a skin rash or an allergic reaction to medicines that contain cabotegravir</li>
+              <li>have or have had liver problems</li>
+              <li>have ever had mental health problems</li>
+              <li>are pregnant or plan to become pregnant. It is not known if APRETUDE will harm your unborn baby. APRETUDE can remain in your body for up to 12 months or longer after the last injection. Tell your healthcare provider if you become pregnant while or after receiving APRETUDE</li>
+              <li>are breastfeeding or plan to breastfeed. APRETUDE may pass to your breast milk. Talk with your healthcare provider about the best way to feed your baby while or after receiving APRETUDE</li>
+          </ul>
+          <p><b>Tell your healthcare provider about all the medicines you take,</b> including prescription and over-the-counter medicines, vitamins, and herbal supplements.</p>
+          <ul>
+              <li>Some medicines may interact with APRETUDE. Keep a list of your medicines and show it to your healthcare provider and pharmacist. <b>Do not start a new medicine without telling your healthcare provider</b></li>
+          </ul>
+          <h3>How will I receive APRETUDE?</h3>
+          <ul>
+              <li>APRETUDE will be given to you as an injection by your healthcare provider</li>
+              <li>APRETUDE is initially given as an injection into the muscle of your buttock 1 time every month for the first 2 months, then as an injection 1 time every 2 months</li>
+              <li>Before receiving your first APRETUDE injection, your healthcare provider may have you take 1 oral cabotegravir tablet 1 time a day for 1 month (at least 28 days) to assess how well you tolerate cabotegravir</li>
+              <li>APRETUDE is a long-acting medicine and may stay in your body for 12 months or longer after your last injection</li>
+              <li>Stay under the care of a healthcare provider while receiving APRETUDE. It is important that you receive APRETUDE as scheduled</li>
+              <li>If you miss or plan to miss a scheduled injection of APRETUDE by more than 7 days, call your healthcare provider right away to discuss your PrEP options</li>
+              <li>If you stop receiving APRETUDE, talk to your healthcare provider about other options to reduce the risk of getting HIV-1 infection</li>
+          </ul>
+          <p><b>You are encouraged to report negative side effects of prescription drugs to the FDA. Visit <span id="fda" class="link" onclick="exits(event)">www.fda.gov/medwatch</span>, or call 1-800-FDA-1088.</b></p>
+          <p><b>Please read the <span id="isi_patient" class="link" onclick="exits(event)">Patient Information</span> for APRETUDE and discuss it with your healthcare provider.</b></p>
+          <p>For US Audiences only. </p>
+          <p>Trademarks are properties of their respected owners. </p>
+          <p>&copy;2025 ViiV Healthcare or licensor. </p>
+          <p>XXXXXXXXXX February 2025</p>
+          <p class="mb6">Produced in USA.</p>
+        </div>
+      </div>
+</div>
+<script type="text/javascript" src="js/main.js"></script>
+<link rel="stylesheet" href="css/style.css">
+</body>
+</html>

@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Banner</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+  <meta name="ad.size" content="width=300,height=250" />
+  <meta name="format-detection" content="telephone=no" />
+  
+  <style>
+  @import url('https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet');
+  </style>
+  
+  <style>
+    :root {
+      --primary: #000;
+      --secondary: #1D4D60;
+      --cream: #F6F5F0;
+      --redLink: #BF4E4E;
+      --gray: #BABABA;
+      --width: 300px;
+      --height: 250px;
+      --half: calc(min(var(--width), var(--height)) * .5);
+      --family: "Barlow", Arial, Helvetica, sans-serif;
+      --base: 12px;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    div {
+      position: absolute;
+    }
+
+    #loader {
+      width: var(--width);
+      height: var(--height);
+      display: grid;
+      align-items: center;
+      justify-items: center;
+    }
+
+    #loader::before {
+      content: '';
+      border: 5px solid #afafb7;
+      border-radius: 50%;
+      width: var(--half);
+      height: var(--half);
+      max-width: 60px;
+      max-height: 60px;
+    }
+
+    #loader::after {
+      content: '';
+      position: absolute;
+      border: 3px solid #afafb7;
+      border-top-color: white;
+      border-radius: 50%;
+      animation: spinner 1s linear infinite;
+      width: var(--half);
+      height: var(--half);
+      padding: 1px;
+      max-width: 60px;
+      max-height: 60px;
+    }
+
+    @keyframes spinner {
+      from {
+        transform: rotate(0deg);
+      }
+
+      to {
+        transform: rotate(-360deg);
+      }
+    }
+
+    .banner {
+      display: none;
+    }
+  </style>
+  <script type="text/javascript">
+    var clickTag1 = "https://www.zepzelcapro.com/",
+        clickTag2 = "https://pp.jazzpharma.com/pi/zepzelca.en.USPI.pdf";
+
+    this.onload = onLoaderReady
+
+    function onLoaderReady() {
+      if (document.querySelector('#loader') && document.querySelector('#loader').offsetWidth > 0) {
+        politeInit();
+      } else {
+        setTimeout(() => onLoaderReady(), 100);
+      }
+    }
+
+    function politeInit() {
+      const extCSS = document.createElement('link');
+      extCSS.setAttribute("rel", "stylesheet");
+      extCSS.setAttribute("type", "text/css");
+      extCSS.setAttribute("href", "css/style.css");
+      document.getElementsByTagName("head")[0].appendChild(extCSS);
+      extCSS.onload = () =>
+        include('https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.3/gsap.min.js').onload = () =>
+          include('js/isi.js').onload = () =>
+            include('js/main.js').onload = () => loadImages()
+
+      function include(file) {
+        const script = document.createElement('script')
+        script.src = file
+        script.type = 'text/javascript'
+        script.defer = true
+        document.getElementsByTagName('head').item(0).appendChild(script)
+        return script
+      }
+    }
+  </script>
+</head>
+
+<body>
+  <div id="loader"></div>
+  <div class="banner" id="banner" style="display: none">
+
+    <div id="dock">
+      <div id="sky" class="size retina"></div>
+      <div id="sun" class="size retina"></div>
+      <div id="sea" class="size retina"></div>
+    </div>
+    <div id="beach">
+      <div id="bg1" class="size retina"></div>
+    </div>
+    <div id="whiteBar"></div>
+    <div id="coverCont">
+      <div id="bg0"></div>
+      <div id="cover" class="size retina"></div>
+    </div>
+    <div id="plants" class="size retina"></div>
+    <div id="couple" class="size retina"></div>
+    <div id="coupleSprite">
+      <div id="sprite" class="retina"></div>
+    </div>
+    
+
+    <div id="copy1_1" class="size retina s1"></div>
+    <div id="copy2_1" class="size retina"></div>
+    <!-- <div id="copy3_1" class="size retina copy3"></div> -->
+    <!-- <div id="copy3_2" class="size retina copy3"></div> -->
+    <div id="copy4_1" class="size retina"></div>
+   
+    <div id="bar" class="size retina"></div>
+    <div id="logo" class="size retina"></div>
+    <div id="pi" class="size retina"></div> 
+
+    <div id="cta" class="size retina s1"></div>
+
+    <div id="btn-exit"></div>
+    <div id="isi-container">
+      <div id="isi">
+        <h1>IMPORTANT SAFETY INFORMATION</h1>
+        
+        <h2>Myelosuppression</h2>
+
+        <p>ZEPZELCA can cause myelosuppression. In a clinical study of 242 patients with ES-SCLC receiving ZEPZELCA in combination with atezolizumab, Grade 3 or 4 neutropenia occurred in 18% of patients. Febrile neutropenia occurred in 2% of patients.</p>
+        
+        <p>Sepsis occurred in 1% of patients and was fatal in 1%. Grade 3 or 4 thrombocytopenia occurred in 15% and Grade 3 or 4 anemia occurred in 13% of patients. Primary prophylaxis with G-CSF was mandated in the study protocol.</p>
+        
+        <p>Administer ZEPZELCA only to patients with baseline neutrophil count of at least 1,500 cells/mm<sup>3</sup> and platelet count of at least 100,000/mm<sup>3</sup>.</p>
+
+        <p>Monitor blood counts including neutrophil count and platelet count prior to each administration. For neutrophil count less than 500 cells/mm<sup>3</sup> or any value less than lower limit of normal, the use of G-CSF is recommended. Withhold, reduce the dose, or permanently discontinue ZEPZELCA based on severity.</p>
+
+        <h5>Hepatotoxicity</h5>
+
+        <p>ZEPZELCA can cause hepatotoxicity. In a clinical study of 242 patients with ES-SCLC receiving ZEPZELCA in combination with atezolizumab, Grade 3 or 4 elevations of ALT and AST were observed in 3.3% and 2.5% of patients, respectively.</p>
+
+        <p>Monitor liver function tests prior to initiating ZEPZELCA, periodically during treatment, and as clinically indicated. Withhold, reduce the dose, or permanently discontinue ZEPZELCA based on severity.</p>
+
+        <h5>Extravasation Resulting in Tissue Necrosis</h5>
+
+        <p>Extravasation of ZEPZELCA resulting in skin and soft tissue injury, including necrosis requiring debridement, can occur. Consider use of a central venous catheter to reduce the risk of extravasation, particularly in patients with limited venous access. Monitor patients for signs and symptoms of extravasation during the ZEPZELCA infusion. If extravasation occurs, immediately discontinue the infusion, remove the infusion catheter, and monitor for signs and symptoms of tissue necrosis. The time to onset of necrosis after extravasation may vary.</p>
+
+        <p>Administer supportive care and consult with an appropriate medical specialist as needed for signs and symptoms of extravasation. Administer subsequent infusions at a site that was not affected by extravasation.</p>
+
+        <h5>Rhabdomyolysis</h5>
+
+        <p>Rhabdomyolysis has been reported in patients treated with ZEPZELCA.</p>
+
+        <p>Monitor creatine phosphokinase (CPK) prior to initiating ZEPZELCA and periodically during treatment as clinically indicated. Withhold or reduce the dose based on severity.</p>
+
+        <h5>Embryo-Fetal Toxicity</h5>
+
+        <p>ZEPZELCA can cause fetal harm when administered to a pregnant woman. Advise pregnant women of the potential risk to a fetus. Advise female patients of reproductive potential to use effective contraception during treatment with ZEPZELCA and for 6 months after the last dose. Advise male patients with female partners of reproductive potential to use effective contraception during treatment with ZEPZELCA and for 4 months after the last dose.</p>
+
+        <h5>Lactation</h5>
+
+        <p>There are no data on the presence of ZEPZELCA in human milk, however, because of the potential for serious adverse reactions from ZEPZELCA in breastfed children, advise women not to breastfeed during treatment with ZEPZELCA and for 2 weeks after the last dose.</p>
+
+        <h4>ADVERSE REACTIONS</h4>
+
+        <p>Serious adverse reactions occurred in 31% of patients receiving ZEPZELCA with atezolizumab. Serious adverse reactions occurred in >2% were pneumonia (2.5%), respiratory tract infections (2.1%), dyspnea (2.1%), and decreased platelets (2.1%).</p>
+
+        <p>The most common adverse reactions (≥30%), including laboratory abnormalities, in patients who received ZEPZELCA with atezolizumab were lymphopenia (55%), thrombocytopenia (54%), anemia (51%), leukopenia (40%), neutropenia (36%), nausea (36%), and fatigue/asthenia (33%).</p>
+
+        <p>ZEPZELCA was studied only with intravenous atezolizumab. For information on use of atezolizumab administered subcutaneously, see the atezolizumab and hyaluronidase-tqjs prescribing information.</p>
+        
+        <h4>DRUG INTERACTIONS</h4>
+
+        <p><u>Effect of CYP3A Inhibitors and Inducers</u><br> Avoid coadministration with a strong or a moderate CYP3A inhibitor (including grapefruit and Seville oranges) as this increases lurbinectedin systemic exposure which may increase the incidence and severity of adverse reactions to ZEPZELCA. If coadministration cannot be avoided, reduce the ZEPZELCA dose as appropriate.</p>
+
+        <p>Avoid coadministration with a strong CYP3A inducer as it may decrease systemic exposure to lurbinectedin, which may decrease the efficacy of ZEPZELCA.</p>
+
+        <h4>GERIATRIC USE</h4>
+
+        <p>Of the 242 patients with ES-SCLC administered ZEPZELCA and atezolizumab in a clinical study, 124 (51%) patients were 65 years of age and older, while 29 (12%) patients were 75 years of age and older. No difference in effectiveness was observed between patients aged 65 and older and younger patients.</p>
+
+        <p>There was no significant difference in the incidence of serious adverse reactions in patients ≥ 65 years of age and patients < 65 years of age (33% vs. 29%, respectively).</p>
+
+        <h4>HEPATIC IMPAIRMENT</h4>
+
+        <p>Avoid administration of ZEPZELCA in patients with severe hepatic impairment. If administration cannot be avoided, reduce the dose. Monitor for increased adverse reactions in patients with severe hepatic impairment.</p>
+
+        <p>Reduce the dose of ZEPZELCA in patients with moderate hepatic impairment. Monitor for increased adverse reactions in patients with moderate hepatic impairment.</p>
+
+        <p>No dose adjustment of ZEPZELCA is recommended for patients with mild hepatic impairment.</p>
+
+        <h4>INDICATION</h4>
+
+        <p>ZEPZELCA (lurbinectedin), in combination with atezolizumab or atezolizumab and hyaluronidase-tqjs, is indicated for the maintenance treatment of extensive-stage small cell lung cancer (ES-SCLC) in adult patients whose disease has not progressed after first-line induction therapy with atezolizumab or atezolizumab and hyaluronidase-tqjs, carboplatin and etoposide.</p>
+
+        <p><b>Please see accompanying full <span id="pi_link" class="link" onclick="exits(event)">Prescribing Information</span>.</b></p>
+
+        <p><span class="p_indent">*</span><b>Study overview:</b> IMforte was a Phase 3 randomized, multicenter, open-label study in 483 patients with ES-SCLC evaluating the efficacy and safety of ZEPZELCA + atezolizumab vs atezolizumab alone as maintenance therapy after first-line induction.<sup>1,2</sup> The study consisted of an induction phase and a maintenance phase. Patients were randomized to the maintenance phase if they had an ongoing response or stable disease, per RECIST v1.1, and an ECOG PS of 0 or 1 after completion of 4 cycles of atezolizumab, carboplatin, and etoposide induction treatment. Randomized patients received either ZEPZELCA (3.2 mg/m<sup>2</sup> IV q3w) + atezolizumab (1200 mg IV q3w) (n=242) or atezolizumab (1200 mg IV q3w) (n=241), until disease progression or unacceptable toxicity. Dual primary endpoints were OS (time from randomization into the maintenance phase to death from any cause) and IRF-PFS (time from randomization into the maintenance phase to disease progression per RECIST v1.1, as assessed by the IRF, or death from any cause, whichever occurred first).<sup>1,2</sup></p>
+
+        <p>CI=confidence interval; ECOG PS=Eastern Cooperative Oncology Group Performance Status; ES-SCLC=extensive-stage small cell lung cancer; HR=hazard ratio; mOS=median overall survival; q3w=every 3 weeks; RECIST=Response Evaluation Criteria in Solid Tumors.</p>
+
+        <p><b>References:</b> ZEPZELCA (lurbinectedin) Prescribing Information. Jazz Pharmaceuticals, Inc.</p>
+      
+        <p>
+          <img id="isi_logo" src="img/isi_logo.png" alt="">
+        </p>
+
+        <p>ZEPZELCA is a registered trademark of PharmaMar, S.A. used by Jazz Pharmaceuticals under license.</p>
+
+        <p>©2025 Jazz Pharmaceuticals<br>US-LUR-2500048  Rev0925</p>
+         
+
+      </div>
+    </div>
+    <div id="pi_btn" onclick="exits(event)"></div>
+  </div>
+  <script>document.querySelector("#loader").onload = () => console.log(document.querySelector("#loader").offsetWidth)</script>
+</body>
+
+</html>

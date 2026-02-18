@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta charset="UTF-8" name="ad.size" content="width=300,height=250">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.2.6/gsap.min.js"></script>
+<link rel="stylesheet" type="text/css" href="assets/style.css">
+<script type="text/javascript" src="assets/script.js"></script>
+<script type="text/javascript">
+var clickTag = "https://www.someURL.com";
+
+function checkGreensockReady(){
+			if ( window.TimelineMax ){
+				//console.log('greensockready');
+				startAd();
+			}else{
+			setTimeout( checkGreensockReady, 20 );
+			}
+			}
+window.onload = checkGreensockReady;
+ 
+</script>
+<title>MACDONALDS</title>
+</head>
+
+<body>
+        <div id="container">
+            <div id="ad" onclick="window.open(window.clickTag)">
+                <div id="banner" style="visibility: hidden;">
+                    
+                    <div id="background"></div>
+                    <div id="ctaBTN">
+                        <div id="ctaCopyB"></div>
+                        <div id="blackCta"></div>
+                        <div id="ctaCopyW"></div>
+                    </div>
+                    <div id="copy1_headline"></div>
+                    <div id="copy2_subheadline"></div>
+                    <div id="copy3_legal"></div>
+                    <div id="coffee"></div>
+                    <div id="steam_sprite_container">
+                        <img id="steam" src="assets/sprite_secuence.png">
+                    </div>
+<!--                    <div id='guide'></div>-->
+              </div>
+            </div>
+        </div>
+    </body>
+</html>
