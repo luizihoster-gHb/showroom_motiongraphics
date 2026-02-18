@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Banner</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+  <meta name="ad.size" content="width=300,height=600" />
+  <meta name="format-detection" content="telephone=no" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
+    rel="stylesheet">
+  <style>
+    :root {
+      --primary: #333;
+      --secondary: #fff;
+      --white: #fff;
+      --width: 300px;
+      --height: 600px;
+      --half: calc(min(var(--width), var(--height)) * .5);
+      --family: Arial, Helvetica, sans-serif;
+      --base: 12px;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    div {
+      position: absolute;
+    }
+
+    #loader {
+      width: var(--width);
+      height: var(--height);
+      display: grid;
+      align-items: center;
+      justify-items: center;
+    }
+
+    #loader::before {
+      content: '';
+      border: 5px solid #afafb7;
+      border-radius: 50%;
+      width: var(--half);
+      height: var(--half);
+      max-width: 60px;
+      max-height: 60px;
+    }
+
+    #loader::after {
+      content: '';
+      position: absolute;
+      border: 3px solid #afafb7;
+      border-top-color: white;
+      border-radius: 50%;
+      animation: spinner 1s linear infinite;
+      width: var(--half);
+      height: var(--half);
+      padding: 1px;
+      max-width: 60px;
+      max-height: 60px;
+    }
+
+    @keyframes spinner {
+      from {
+        transform: rotate(0deg);
+      }
+
+      to {
+        transform: rotate(-360deg);
+      }
+    }
+
+    .banner {
+      display: none;
+    }
+  </style>
+  <script type="text/javascript">
+    var clickTag = ""
+    this.onload = onLoaderReady
+    function onLoaderReady() {
+      if (document.querySelector('#loader') && document.querySelector('#loader').offsetWidth > 0) {
+        politeInit();
+      } else {
+        setTimeout(() => onLoaderReady(), 100);
+      }
+    }
+    function politeInit() {
+      const extCSS = document.createElement('link');
+      extCSS.setAttribute("rel", "stylesheet");
+      extCSS.setAttribute("type", "text/css");
+      extCSS.setAttribute("href", "css/style.css");
+      document.getElementsByTagName("head")[0].appendChild(extCSS);
+      extCSS.onload = () =>
+        include('https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.3/gsap.min.js').onload = () =>
+          include('js/MorphSVGPlugin.min.js').onload = () =>
+            include('js/DrawSVGPlugin.min.js').onload = () =>
+              include('js/main.js').onload = () => loadImages()
+      function include(file) {
+        const script = document.createElement('script')
+        script.src = file
+        script.type = 'text/javascript'
+        script.defer = true
+        document.getElementsByTagName('head').item(0).appendChild(script)
+        return script
+      }
+    }
+  </script>
+</head>
+
+<body>
+  <div id="loader"></div>
+  <div class="banner" id="banner">
+    <div id="bg1_graphic" class="size retina graphic"></div>
+
+    <div id="line" class="size retina">
+      <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+        viewBox="0 0 300 600" style="enable-background:new 0 0 300 600;" xml:space="preserve">
+        <style type="text/css">
+          .st0 {
+            display: none;
+          }
+
+          .st1 {
+            fill: none;
+            stroke: #11a2df;
+            stroke-width: 1;
+            stroke-miterlimit: 10;
+          }
+
+          .st2 {
+            fill: none;
+            stroke: #11a2df;
+            stroke-width: 1;
+            stroke-miterlimit: 10;
+          }
+
+          .st3 {
+            fill: none;
+            stroke: #0099DC;
+            stroke-miterlimit: 10;
+          }
+
+          .st4 {
+            fill: none;
+            stroke: #0099DC;
+            stroke-miterlimit: 10;
+            stroke-dasharray: 3px;
+          }
+        </style>
+        <g id="lines">
+          <line id="line1" class="st1" x1="11" y1="11.5" x2="289" y2="11.5"></line>
+        </g>
+      </svg>
+    </div>
+
+    <div id="imgMain" class="size retina"></div>
+    <div id="bg2_graphic" class="size retina graphic"></div>
+    <div id="copy1" class="size retina copy1"></div>
+
+    <div id="line2" class="size retina">
+      <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+        viewBox="0 0 300 600" style="enable-background:new 0 0 300 600;" xml:space="preserve">
+        <style type="text/css">
+          .st0 {
+            display: none;
+          }
+
+          .st1 {
+            fill: none;
+            stroke: #11a2df;
+            stroke-width: 1;
+            stroke-miterlimit: 10;
+          }
+
+          .st2 {
+            fill: none;
+            stroke: #11a2df;
+            stroke-width: 1;
+            stroke-miterlimit: 10;
+          }
+        </style>
+        <g id="lines">
+          <polyline id="line2" class="st1" points="11.5,11 11.5,588.5 289,588.5"></polyline>
+          <line id="line3" class="st1" x1="288.5" y1="11" x2="288.5" y2="589"></line>
+        </g>
+      </svg>
+    </div>
+
+    <!-- <div id="name" class="size retina"></div> -->
+    <div id="copy3" class="size retina copy3"></div>
+
+    <div id="containerGraphic">
+      <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg"
+        xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" viewBox="0 0 300 600">
+        <defs>
+          <style>
+            .cls-1 {
+              fill: url(#linear-gradient);
+            }
+
+            .cls-1,
+            .cls-2 {
+              stroke-width: 0px;
+            }
+
+            .cls-2 {
+              fill: url(#linear-gradient-2);
+            }
+          </style>
+          <linearGradient id="linear-gradient" x1="100" y1="400" x2="300" y2="65" gradientUnits="userSpaceOnUse">
+            <stop offset="0" style="stop-color:#5DADDC" />
+            <stop offset="0.2287" style="stop-color:#5AAADA" />
+            <stop offset="0.4121" style="stop-color:#52A0D5" />
+            <stop offset="0.5799" style="stop-color:#448FCD" />
+            <stop offset="0.7383" style="stop-color:#3077C1" />
+            <stop offset="0.8886" style="stop-color:#1759B2" />
+            <stop offset="1" style="stop-color:#003DA4" />
+          </linearGradient>
+          <linearGradient id="linear-gradient-2" x2="300" y2="300" xlink:href="#linear-gradient"></linearGradient>
+        </defs>
+
+        <path id="Path1" class="cls-1" d="M237.8,262.8l-14.5,15l-23.2,11
+      	l-75.3,97.8l-24.3,6.8l-26.9,53l-22.2,12.3L33,462h241V238.3l-25.2,14.2L237.8,262.8z">
+        </path>
+        <path id="Path2" class="cls-2" d="M251,411.9L235.4,395
+      	l-38.9,20.9l-83.6,18.9l-29.4-10l-27.2,24.4L35.5,461l-2.5,0.9h241v-27.6L251,411.9L251,411.9z">
+        </path>
+      </svg>
+    </div>
+    <div id="off">
+      <div id="lineGraphic"></div>
+      <div id="numberContainer" class="lato-black"><span id="number">15</span><span id="number3">%</span></div>
+      <div id="numberContainer2" class="lato-black"><span></span><span id="number2">0</span>%</div>
+      <div id="copy2" class="size retina"></div>
+    </div>
+
+    <div id="graphicDate" class="size retina"></div>
+    <div id="oval1" class="size retina"></div>
+    <div id="oval2" class="size retina"></div>
+
+    <div id="cta" class="size retina">
+      <div id="cta1" class="size retina"></div>
+    </div>
+
+    <div id="disclaimer" class="size retina"></div>
+
+    <div id="qsButtons" class="size2">
+      <div id="inactive" class="size retina"></div>
+      <div id="q1" class="size retina qss"></div>
+      <div id="q2" class="size retina qss"></div>
+      <div id="q3" class="size retina qss"></div>
+      <div id="q4" class="size retina qss"></div>
+      <div id="q5" class="size retina "></div>
+    </div>
+
+    <div id="shineCont">
+      <div id="shine1" class="shine"></div>
+    </div>
+
+    <div id="logo" class="size retina"></div>
+    <div id="btn-exit"></div>
+  </div>
+</body>
+
+</html>

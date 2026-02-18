@@ -1,0 +1,224 @@
+.banner {
+  width: var(--width);
+  height: var(--height);
+  border: 1px solid var(--primary);
+  background: var(--white);
+  overflow: hidden;
+  box-sizing: border-box;
+  font-family: var(--family);
+}
+
+.size {
+  top: -1px;
+  left: -1px;
+  width: var(--width);
+  height: var(--height);
+}
+
+.size2 {
+  width: var(--width);
+  height: var(--height);
+}
+
+.shine {
+  background: linear-gradient(45deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0) 22%, rgba(255, 255, 255, 0.46) 34%, rgba(255, 255, 255, 0.5) 35%, rgba(255, 255, 255, 1) 51%, rgba(255, 255, 255, 0.3) 64%, rgba(255, 255, 255, 0) 75%, rgba(255, 255, 255, 0) 76%, rgba(255, 255, 255, 0) 100%);
+}
+
+.retina {
+  background-size: contain !important;
+  background-repeat: no-repeat !important;
+}
+
+#btn-exit {
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  opacity: 0;
+}
+
+svg {
+  display: none;
+}
+
+#shineCont {
+  top: 17px;
+  left: 168px;
+  width: 18px;
+  height: 15px;
+  overflow: hidden;
+}
+
+#shine1 {
+  position: relative;
+  width: 36px;
+  height: 15px;
+  left: -36px;
+}
+
+#Path1 {
+  visibility: hidden;
+}
+
+#Path1,
+#Path2 {
+  transform: scaleY(1.08);
+}
+
+#bg1_graphic {
+  background: url(../img/bg1_graphic.png);
+  opacity: 0;
+}
+
+#bg2_graphic {
+  background: url(../img/bg2_graphic.png);
+  opacity: 0;
+}
+
+#imgMain {
+  background: url(../img/imgMain.png);
+}
+
+#copy1 {
+  background: url(../img/copy1.png);
+}
+
+#copy2 {
+  background: url(../img/copy2.png);
+}
+
+#copy3 {
+  background: url(../img/copy3.png);
+}
+
+#disclaimer {
+  background: url(../img/disclaimer.png);
+}
+
+
+#lineGraphic {
+  top: 410px;
+  left: 36px;
+  width: 0px;
+  height: 1px;
+  background-color: #1497d5;
+}
+
+#cta {
+  width: var(--width);
+  height: var(--height);
+  opacity: 0;
+  top: 0px;
+  left: 0px;
+}
+
+#cta1 {
+  background: url(../img/cta1.png);
+  filter: drop-shadow(2px 4px 3px rgba(0, 0, 0, .3));
+}
+
+#logo {
+  background: url(../img/logoPMI.png);
+}
+
+.lato-bold {
+  font-family: "Lato", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.lato-black {
+  font-family: "Lato", sans-serif;
+  font-weight: 900;
+  font-style: normal;
+  font-size: 50pt;
+  letter-spacing: -0.01em;
+}
+
+#numberContainer {
+  top: 314px;
+  left: 147px;
+  color: white;
+}
+
+#numberContainer2 {
+  top: 391px;
+  left: 27px;
+  color: #003da5;
+  font-size: 9pt;
+  opacity: 0;
+}
+
+#number3 {
+  position: relative;
+  font-size: 25pt;
+  top: -28px;
+  left: 10px;
+}
+
+#number {
+  position: relative;
+  font-size: 45pt;
+  top: -9px;
+  left: 8px;
+}
+
+#inactive {
+  background: url(../img/qs_inactive.png);
+}
+
+#q1 {
+  background: url(../img/qs_active_q1.png);
+}
+
+#q2 {
+  background: url(../img/qs_active_q2.png);
+}
+
+#q3 {
+  background: url(../img/qs_active_q3.png);
+}
+
+#q4 {
+  background: url(../img/qs_active_q4.png);
+}
+
+#q5 {
+  background: url(../img/qs_active_q1.png);
+}
+
+#containerGraphic {
+  width: 285px;
+  height: 600px;
+  bottom: 61px;
+  left: 2px;
+  position: absolute;
+  mix-blend-mode: multiply;
+}
+
+#graphic {
+  background: url(../img/graphic.svg);
+  mix-blend-mode: multiply;
+}
+
+#graphicDate {
+  background: url(../img/graphicDate.png);
+}
+
+#oval1 {
+  background: url(../img/oval1.svg);
+  top: -42px;
+}
+
+#oval2 {
+  background: url(../img/oval2.svg);
+  top: -49px;
+  left: -8px;
+}
+
+#white {
+  background: #ffffff;
+  width: 7px;
+  height: 4px;
+  top: 407px;
+  left: 24px;
+}
