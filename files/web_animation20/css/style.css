@@ -1,0 +1,406 @@
+.banner {
+  width: var(--width);
+  height: var(--height);
+  border: 1px solid black;
+  background: linear-gradient(45deg, silver, lavender);
+  background-size: var(--width) var(--height);
+  background-repeat: no-repeat;
+  background-position: -1px -1px;
+  overflow: hidden;
+  box-sizing: border-box;
+  font-family: var(--family);
+}
+
+.size {
+  top: -1px;
+  left: -1px;
+  width: var(--width);
+  height: var(--height);
+}
+
+.retina {
+  background-size: contain !important;
+  background-repeat: no-repeat !important;
+}
+
+.hide{
+  opacity: 0;
+}
+
+#btn-exit {
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  opacity: 0;
+}
+
+#bg{
+  background: url(../img/background.jpg);
+}
+
+#logobar{
+  background: url(../img/logobar.png);
+}
+
+#copy1_1 {
+  background: url(../img/copy1_1.png);
+}
+#copy1_2 {
+  background: url(../img/copy1_2.png);
+}
+#copy1_3 {
+  background: url(../img/copy1_3.png);
+}
+
+#copy2 {
+  background: url(../img/copy2.png);
+}
+
+#copy3 {
+  background: url(../img/copy3.png);
+}
+
+#copy4 {
+  background: url(../img/copy4.png);
+}
+
+#copy5 {
+  background: url(../img/copy5.png);
+}
+
+#copy6_1 {
+  background: url(../img/copy6_1.png);
+}
+
+#copy6_2 {
+  background: url(../img/copy6_2.png);
+}
+
+#copy7_1 {
+  background: url(../img/copy7_1.png);
+}
+
+#copy7_2 {
+  background: url(../img/copy7_2.png);
+}
+
+.title{
+  background: url(../img/title.png);
+}
+
+/*#title{
+  background: url(../img/title.png);
+}*/
+
+#mask1{
+  width: var(--width);
+  height: var(--height);
+/*  clip-path: path('M159.5,126.4c0,0.5-0.3,0.9-0.8,1.2c-0.3,0.2-0.8,0.2-1.3,0.2c-0.2-0.1-0.4-0.2-0.7-0.4c-0.1-0.1-0.3-0.1-0.5,0l-0.8,0.3c-0.9,0.2-1.7,0.1-2.4-0.4c0,0-1.2-0.9-0.5-2.6c0.8-1.5,2.3-1.5,3.1-1.4c0.8,0.1,1.5,0.4,1.8,0.7l0.6,0.6c0.2,0.1,0.5,0.2,0.7,0.3c0.3,0.1,0.4,0.2,0.6,0.4C159.5,125.4,159.6,125.9,159.5,126.4z');*/
+/*  clip-path:path("M253.2,150.9c-0.4,13.5-9.2,23.4-21,32c-9,5.5-21.4,6.6-36,5c-5.9-2.2-11.9-5.4-18-11c-3.4-2.1-7.7-2.2-13,0l-23,7c-24.1,5-45.6,1.5-64-12c0,0-33.5-24.5-14.5-70c22-41.5,63-40.5,84.5-39s41.9,12.1,48.5,19.5l15,15c6.8,3.3,13,5.5,19,7c7.6,2.1,12.2,5.9,15.5,10.5C253,124.6,255.5,136.5,253.2,150.9z");*/
+  clip-path: polygon(50% 50%, 50% 50%, 50% 50%, 50% 50%, 50% 50%, 50% 50%, 50% 50%, 50% 50%, 50% 50%, 50% 50%, 50% 50%, 50% 50%, 50% 50%, 50% 50%, 50% 50%, 50% 50%, 50% 50%, 50% 50%, 50% 50%, 50% 50%, 50% 50%, 50% 50%, 50% 50%, 50% 50%);
+/*  background-color: red;*/
+/*  xoverflow: hidden;*/
+
+}
+#mask2{
+  width: var(--width);
+  height: var(--height);
+/*  clip-path: polygon(28% 51%, 35% 51%, 44% 48%, 48% 55%, 47% 65%, 40% 73%, 30% 74%, 21% 69%, 18% 62%, 20% 52%);*/
+  clip-path: polygon(33% 53%, 33% 53%, 33% 53%, 33% 53%, 33% 53%, 33% 53%, 33% 53%, 33% 53%, 33% 53%, 33% 53%);
+/*  background-color: red;  */
+}
+#mask3{
+  width: var(--width);
+  height: var(--height);
+/*  clip-path: polygon(74% 49%, 80% 52%, 83% 58%, 80% 68%, 74% 72%, 65% 73%, 57% 67%, 53% 57%, 58% 50%, 67% 52%);*/
+  clip-path: polygon(66% 53%, 66% 53%, 66% 53%, 66% 53%, 66% 53%, 66% 53%, 66% 53%, 66% 53%, 66% 53%, 66% 53%);
+/*  background-color: blue;  */
+}
+#mask4{
+  width: var(--width);
+  height: var(--height);
+/*  clip-path: polygon(50% 32%, 41% 25%, 32% 26%, 26% 30%, 22% 40%, 22% 51%, 27% 62%, 42% 83%, 51% 91%, 60% 82%, 73% 62%, 78% 47%, 76% 32%, 68% 26%, 59% 26%);*/
+  clip-path: polygon(50% 50%, 50% 50%, 50% 50%, 50% 50%, 50% 50%, 50% 50%, 50% 50%, 50% 50%, 50% 50%, 50% 50%, 50% 50%, 50% 50%, 50% 50%, 50% 50%, 50% 50%);
+/*  background-color: red; */
+}
+#mask5{
+  width: var(--width);
+  height: var(--height);
+/*  clip-path: polygon(51% 26%, 60% 30%, 68% 42%, 67% 76%, 62% 87%, 51% 93%, 35% 86%, 32% 74%, 32% 41%, 38% 30%);*/
+/*  clip-path: polygon(50% 60%, 50% 60%, 50% 60%, 50% 60%, 50% 60%, 50% 60%, 50% 60%, 50% 60%, 50% 60%, 50% 60%);*/
+/*  clip-path: xywh(150px 125px 1% 1% round 30%);*/
+/*  background-color: red;  */
+}
+#mask6{
+  width: var(--width);
+  height: var(--height);
+/*  clip-path: polygon(50% 34%, 38% 33%, 30% 37%, 23% 44%, 18% 54%, 18% 67%, 22% 77%, 30% 84%, 41% 84%, 49% 81%, 59% 83%, 66% 83%, 73% 80%, 80% 71%, 81% 55%, 78% 45%, 70% 37%, 61% 33%);*/
+/*  clip-path: polygon(50% 50%, 50% 50%, 50% 50%, 50% 50%, 50% 50%, 50% 50%, 50% 50%, 50% 50%, 50% 50%, 50% 50%, 50% 50%, 50% 50%, 50% 50%, 50% 50%, 50% 50%, 50% 50%, 50% 50%, 50% 50%); */
+/*  background-color: red; */
+}
+#mask7{
+  width: var(--width);
+  height: var(--height);
+/*  clip-path: polygon(0 26%, 100% 26%, 100% 57%, 0 57%);*/
+  clip-path: polygon(0 26%, 0% 26%, 0% 57%, 0 57%);
+   
+}
+/*letter U N F O L D S*/
+#mask7_U{
+  top:0px;
+  left: 0px;
+  width: 52px;
+  height: var(--height);
+/*  background-color: red;*/
+  overflow: hidden;
+  transform-origin: 0px 129px;
+   
+}
+#mask7_N{
+  top:0px;
+  left: 52px;
+  width: 40px;
+  height: var(--height);
+/*  background-color: red;*/
+  overflow: hidden;
+  transform-origin: 52px 129px;
+}
+#mask7_F{
+  top:0px;
+  left: 93px;
+  width: 40px;
+  height: var(--height);
+/*  background-color: red;*/
+  overflow: hidden;
+  transform-origin: 93px 129px;
+}
+#mask7_O{
+  top:0px;
+  left: 133px;
+  width: 40px;
+  height: var(--height);
+/*  background-color: red;*/
+  overflow: hidden;
+  transform-origin: 133px 129px;
+}
+#mask7_L{
+  top:0px;
+  left: 170px;
+  width: 40px;
+  height: var(--height);
+/*  background-color: blue;*/
+  overflow: hidden;
+  transform-origin: 170px 129px;
+}
+#mask7_D{
+  top:0px;
+  left: 208px;
+  width: 40px;
+  height: var(--height);
+/*  background-color: blue;*/
+  overflow: hidden;
+  transform-origin: 208px 129px;
+}
+#mask7_S{
+  top:0px;
+  left: 248px;
+  width: 40px;
+  height: var(--height);
+/*  background-color: blue;*/
+  overflow: hidden;
+  transform-origin: 248px 129px;
+}
+
+#letter_N{
+  left: -52px !important;
+}
+#letter_F{
+  left: -93px !important;
+}
+#letter_O{
+  left: -133px !important;
+}
+#letter_L{
+  left: -170px !important;
+}
+#letter_D{
+  left: -208px !important;
+}
+#letter_S{
+  left: -248px !important;
+}
+
+.shadow{
+  /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#000000+0,000000+100&0+13,0.65+100 */
+/*  background: radial-gradient(ellipse at center,  rgba(0,0,0,0) 0%,rgba(0,0,0,0) 13%,rgba(0,0,0,0.65) 100%);*/
+
+  /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#000000+0,000000+100&0+42,0.75+61,1+100 */
+/*  background: radial-gradient(ellipse at center,  rgba(0,0,0,0) 0%,rgba(0,0,0,0) 42%,rgba(0,0,0,0.75) 61%,rgba(0,0,0,1) 100%);*/
+
+/* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#000000+0,000000+100&0+10,0.75+30,1+100 */
+background: radial-gradient(ellipse at center,  rgba(0,0,0,0) 0%,rgba(0,0,0,0) 10%,rgba(0,0,0,0.75) 30%,rgba(0,0,0,1) 100%);
+
+mix-blend-mode: multiply;
+
+}
+
+#sha1{
+/*  left: -60px;*/
+  top: 20px;
+  width: var(--width);
+  height: var(--height);
+}
+#sha4{
+/*  left: -60px;*/
+  top: 20px;
+  width: var(--width);
+  height: var(--height);
+}
+
+
+#sha5{
+/*  left: -60px;*/
+  top: 30px;
+  width: var(--width);
+  height: var(--height);
+}
+
+#sha6{
+/*  left: -60px;*/
+  top: 20px;
+  width: var(--width);
+  height: var(--height);
+}
+
+#kidney{
+  top:83px;
+  left: 50px;
+  width: 202px;
+  height: 130px;
+  background: url(../img/img2_kidney.jpg);
+}
+#leftEye{
+  top:127px;
+  left: 58px;
+  width: 81px;
+  height: 54px;
+  background: url(../img/img2_eyes_01.jpg);
+}
+#rightEye{
+  top:127px;
+  left: 164px;
+  width: 81px;
+  height: 54px;
+  background: url(../img/img2_eyes_02.jpg);
+}
+#heart{
+  top:69px;
+  left: 70px;
+  width: 161px;
+  height: 151px;
+  background: url(../img/img2_heart.jpg);
+}
+#body{
+  top:68px;
+  left: 97px;
+  width: 105px;
+  height: 158px;
+  background: url(../img/img2_body.jpg);
+}
+#brain{
+  top:87px;
+  left: 58px;
+  width: 183px;
+  height: 120px;
+  background: url(../img/img2_brain.jpg);
+}
+#eyeBrow_left{
+  width: 57px;
+  height: 24px;
+  left: 69px;
+  top: 88px;
+  background: url(../img/img_eyebrow1.png);
+}
+#eyeBrow_right{
+  width: 50px;
+  height: 23px;
+  left: 176px;
+  top: 89px;  
+  background: url(../img/img_eyebrow2.png);
+}
+
+#logo {
+  background: url(../img/logo.png);
+}
+
+.spriteSize{
+  width: 249px;
+  height: 49px;
+}
+
+#stripContainer1{
+  top: -1.5px;
+  left: -85px;
+/*  width: 1245px;*/
+  height: 49px;
+/*  overflow: hidden;*/
+  display: flex;
+/*  flex-direction: flow;*/
+}
+
+#stripContainer2{
+  top: 77.5px;
+  left: -224px;
+  height: 49px;
+  display: flex;
+}
+
+#stripContainer3{
+  top: 126.5px;
+  left: -107px;
+  height: 49px;
+  display: flex;
+}
+
+#stripContainer4{
+  top: 175.5px;
+  left: -153px;
+  height: 49px;
+  display: flex;
+}
+/*top*/
+.spriteMask_1{
+  background: url(../img/sprite.png);
+  position: static;
+/*  float: right;*/
+  border-top: 25px solid white;
+  border-bottom: 5px solid white;
+}
+/*middle*/
+.spriteMask_2{
+  background: url(../img/sprite.png);
+  position: static;
+}
+/*bottom*/
+.spriteMask_3{
+  background: url(../img/sprite.png);
+  position: static;
+  border-bottom: 25px solid white;
+}
+
+#cta {
+  background: url(../img/cta.png);
+  transform-origin: 224px 193px;
+}
+
+#bgWhite {
+  background: white;
+}
+
+svg {
+  display: none;
+}
+
+.imageRender {
+  image-rendering: auto;
+}
