@@ -1,0 +1,196 @@
+
+.banner {
+    width: var(--width);
+    height: var(--height);
+    border: var(--primary) 1px solid;
+/*    background-image: url(../img/bg.jpg);*/
+    overflow: hidden;
+    box-sizing: border-box;
+    font-family: var(--family);
+    font-size: 9px;
+}
+
+#loader-container {
+    display: none;
+}
+
+#btn-exit {
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    opacity: 0;
+}
+
+.size {
+    top: -1px;
+    left: -1px;
+    width: var(--width);
+    height: var(--height);
+}
+
+.svgSize{
+    width: 600px;
+    height: 400px;
+    top:-150px;
+    left: -180px;
+}
+
+.retina {
+    background-size: contain !important;
+    background-repeat: no-repeat !important;
+}
+
+.circleBig{
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    top: -99px;
+    left: 115px;
+}
+
+.circleSmall{
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    top: 9px;
+    left: 114px;
+}
+#smallCircle1{
+    background-color: var(--tertiary);
+}
+
+#bigCircle1{
+    background-color: var(--secondary);
+    opacity: .2;
+}
+#bigCircle2{
+/*    background-color: red;*/
+    /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#7801e2+0,5e01b5+25,4b0293+50 */
+    background: linear-gradient(to right,  rgba(120,1,226,1) 0%,rgba(94,1,181,1) 25%,rgba(75,2,147,1) 50%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+
+/*    opacity: .2;*/
+}
+
+/*svg circle.circles.blurred {
+  fill: #c2f6fd;
+  -webkit-filter: blur(4px);
+  -moz-filter: blur(4px);
+  -o-filter: blur(4px);
+  -ms-filter: blur(4px);
+  filter: blur(4px);
+}*/
+
+/* ///////////////////////////////////////////////////////////////////////////////////ASSETS///////////////////////////////////////////// */
+#bg {
+/*    background: url(../img/bg.jpg);*/
+background-color: white;
+}
+
+#bg1 {
+/*    background: url(../img/bg1.png);*/
+background-color: white;
+}
+#copy1_1 {
+    background: url(../img/copy1_1.png);
+}
+#copy1_2 {
+    background: url(../img/copy1_2.png);
+}
+#copy2_1 {
+    background: url(../img/copy2_1.png);
+}
+#copy2_2 {
+    background: url(../img/copy2_2.png);
+}
+#copy3_1 {
+    background: url(../img/copy3_1.png);
+}
+#copy3_2 {
+    background: url(../img/copy3_2.png);
+}
+#copy4_1 {
+    background: url(../img/copy4_1.png);
+}
+#copy4_2 {
+    background: url(../img/copy4_2.png);
+}
+#copy4_3 {
+    background: url(../img/copy4_3.png);
+}
+#copy5_1 {
+    background: url(../img/copy5_1.png);
+}
+#copy5_2 {
+    background: url(../img/copy5_2.png);
+}
+#copy6_1 {
+    background: url(../img/copy6_1.png);
+}
+#copy6_2 {
+    background: url(../img/copy6_2.png);
+}
+
+#img{
+    top: 199px; /*197-32 -145*/
+    left: -370px;  /*-370-209 -232*/
+    width: 610px;
+    height: 550px;
+    background: url(../img/img.jpg);
+/*    mix-blend-mode: multiply;*/
+    transform: scale(2.25); /*2.25 - 1 - 0.31*/
+/*    opacity: 0;*/
+}
+
+#mainContainer{
+    height: 100%;
+    width: 100%;
+    top:0px;
+    mix-blend-mode: multiply;
+}
+
+#whiteCover{
+    background: url(../img/white.png);
+}
+#whiteCover2{
+    background-color: white;
+    width: 300px;
+    height: 450px;
+    left:140px;
+    top: -200px;
+}
+
+#disclaimer1 {
+    background: url(../img/disclaimer.png);
+}
+
+#cta {
+    background: url(../img/cta.png);
+}
+#logo2 {
+    background: url(../img/logo2.png);
+}
+
+#footer {
+    bottom: 0px;
+    width: var(--width);
+    height: 59px;
+/*    background: url(../img/footer_trans.png);*/
+/*    background-color: red;*/
+    /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#24004d+0,7a00e6+100 */
+    background: linear-gradient(to right,  rgba(36,0,77,1) 0%,rgba(122,0,230,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    box-shadow: 0px 0px 10px 10px rgba(0, 0, 0, 0.2);
+
+}
+
+#footerBar{
+    width: var(--width);
+    height: 30px;
+    background-color: white;
+
+}
+
+#copyFooter{
+    width: var(--width);
+    height: 60px;
+    background: url(../img/footerCopy.png);
+}

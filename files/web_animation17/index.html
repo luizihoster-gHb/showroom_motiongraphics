@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="ad.size" content="width=300,height=250">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <script type="text/javascript">
+        var clickTag = "https://www.google.com/";
+         // Internet Explorer 6-11
+        var isIE = /*@cc_on!@*/false || !!document.documentMode;
+
+        console.log(isIE,":<<<<<<")
+        function checkGreensockReady() {
+            if (window.TimelineMax) {
+                //console.log('greensockready');
+                 startAd();
+            } else {
+                setTimeout(checkGreensockReady, 50);
+            }
+        }
+        window.onload = checkGreensockReady;
+    </script>
+
+    <div id="container">
+        <div id="ad" onclick="window.open(window.clickTag)">
+
+            <div id="banner" style="visibility: hidden;">
+                <div id="background"></div>
+                <div id="CTA">
+                    <img id="cta_b" src="cta2.png" width="127" height="25">
+                    <img id="cta_a" src="cta.png" width="127" height="25">
+                </div>
+                <div id="ctaMask">
+                    <div id="sheen"></div>
+                </div>
+
+                <!-- <div id="call" class="images"><img src="" width="300" height="250"></div> -->
+                <div id="logo"><img src="logo.svg" width="99" height="34"></div>
+                <div id="box">
+                    <div class="box">
+                        <div class="side1 front">
+                            <img id="contentBG4" src="img4.png" width="285" height="174">
+                        </div>
+                        <div class="side2 back">
+                            <img id="contentBG2" src="img2.png" width="285" height="174">
+                            <img id="meter" src="meter.png" width="164" height="84">
+                            <img id="niddle" src="niddle.png" width="120" height="120">
+                        </div>
+
+                        <div class="side5 top">
+                            <img id="contentBG1" src="img1.png" width="285" height="174">
+                        </div>
+                        <div class="side6 bottom">
+                            <img id="contentBG3" src="img3.png" width="285" height="174">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="https://s0.2mdn.net/ads/studio/cached_libs/tweenmax_1.20.4_3dc5474a75410cb768741e402b80d908_min.js"></script>
+    <script src="main.js"></script>
+
+
+</body>
+
+</html>

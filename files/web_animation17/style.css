@@ -1,0 +1,294 @@
+body {
+  background-color:#ffffff;
+  color:#FFF;
+}
+
+h2{
+  color:#FFF;
+}
+
+a{
+  color:#ffffff;
+}
+#background{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 300px;
+    height: 250px;
+    background : url('board.jpg') no-repeat;
+}
+#box {
+    position: absolute;
+  width:285px;
+    top:7px;
+    left: 6px;
+
+/*  margin:30px;*/
+  /*-webkit-perspective: 800px;
+  -moz-perspective: 800px;
+  -o-perspective: 800px;
+   perspective: 800px;*/
+}
+
+.box {
+    position: absolute;
+    top:0px;
+    left: 0px;
+    width: 285px;
+    height: 176px;
+/*    margin: 30px auto;*/
+    position: relative;
+    -webkit-transform-style: preserve-3d;
+    -moz-transform-style: preserve-3d;
+    -ms-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+}
+
+.box div {
+    position: absolute;
+text-align:center;
+    left: 0;
+    top: 0;
+line-height:100px;
+font-weight:bold;
+font-size:40px;
+    width: 285px;
+    height: 174px;
+color:#111;
+/*transform-origin: 50% 50% -50px;*/
+border: 1px solid #666;
+}
+
+.box div span {
+  display:block;
+  position:relative;
+  top:22%;
+  font-size:42px;
+  font-weight:bold;
+}
+
+.box .side1 {
+     overflow: hidden;
+  background: hsla(0, 100%, 50%, 1);
+  /*-webkit-animation: animate1 12s infinite linear;
+  animation: animate1 12s infinite linear;*/
+}
+
+.box .side2 {
+    overflow: hidden;
+  background: hsla(60, 100%, 50%, 1);
+  /*-webkit-animation: animate2 12s infinite linear;
+  animation: animate2 12s infinite linear;*/
+}
+
+/*
+.box .side3 {
+  background: hsla(120, 100%, 50%, 0.8);
+  -webkit-animation: animate3 12s infinite linear;
+  animation: animate3 12s infinite linear;
+}
+*/
+
+/*
+.box .side4 {
+  background: hsla(180, 100%, 50%, 0.8);
+  -webkit-animation: animate4 12s infinite linear;
+  animation: animate4 12s infinite linear;
+}
+*/
+
+.box .side5 {
+     overflow: hidden;
+  background: hsla(240, 100%, 50%, 1);
+  /*-webkit-animation: animate5 12s infinite linear;
+  animation: animate5 12s infinite linear;*/
+}
+
+.box .side6 {
+     overflow: hidden;
+  background: hsla(300, 100%, 50%, 1);
+  /*animation: animate6 12s infinite linear;
+  -webkit-animation: animate6 12s infinite linear;*/
+}
+
+#container{
+cursor: pointer;
+}
+
+#banner {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 298px;
+    height: 248px;
+    border: 1px solid black;
+    display: block;
+    overflow: hidden;
+}
+#contentBG1,#contentBG2,#contentBG3,#contentBG4{
+    position: absolute;
+    top:0px;
+    left: 0px;
+}
+#meter{
+    position: absolute;
+    left: 100px;
+    top:89px;
+}
+#niddle{
+     position: absolute;
+    left: 123px;
+    top:112px;
+}
+#CTA{
+    position: absolute;
+    width: 127px;
+    height: 25px;
+    right: 9px;
+    bottom: 16px;
+}
+#ctaMask{
+    position: absolute;
+    opacity: 1;
+    right: 9px;
+    bottom: 16px;
+    width: 127px;
+    height: 25px;
+    overflow: hidden;
+}
+#sheen{
+    position: absolute;
+    height: 78px;
+    width: 99px;
+    top: 0px;
+    left: -78px ;
+
+    background: url(shine.png) no-repeat;
+    z-index: 101;
+    opacity: 1;
+}
+#call{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    opacity: 1;
+    width: 300px;
+    height: 250px;
+
+}
+
+#logo{
+    position: absolute;
+    bottom:9px;
+    left: 34px;
+}
+#cta_a{
+    position: absolute;
+    top:0px;
+    left: 0px;
+}
+#cta_b{
+    position: absolute;
+    top:0px;
+    left: 0px;
+}
+/* for Chrome and Chrome */
+/*@-webkit-keyframes animate1 {
+0% {
+-webkit-transform: perspective(600px) rotateX(0deg) rotateY(90deg) rotateZ(0deg);
+}
+100% {
+-webkit-transform: perspective(600px) rotateX(360deg) rotateY(450deg) rotateZ(0deg);
+}
+}
+@-webkit-keyframes animate2 {
+0% {
+-webkit-transform:perspective(600px) rotateX(0deg) rotateY(270deg) rotateZ(0deg);
+}
+100% {
+-webkit-transform:perspective(600px) rotateX(360deg) rotateY(630deg) rotateZ(0deg);
+}
+}
+@-webkit-keyframes animate3 {
+0% {
+-webkit-transform:perspective(600px) rotateX(90deg) rotateY(0deg) rotateZ(0deg);
+}
+100% {
+-webkit-transform:perspective(600px) rotateX(450deg) rotateY(0deg) rotateZ(-360deg);
+}
+}
+@-webkit-keyframes animate4 {
+0% {
+-webkit-transform:perspective(600px) rotateX(-90deg) rotateY(0deg) rotateZ(0deg);
+}
+100% {
+-webkit-transform:perspective(600px) rotateX(270deg) rotateY(0deg) rotateZ(360deg);
+}
+}
+@-webkit-keyframes animate5 {
+0% {
+-webkit-transform:perspective(600px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+}
+100% {
+-webkit-transform:perspective(600px) rotateX(360deg) rotateY(360deg) rotateZ(0deg);
+}
+}
+@-webkit-keyframes animate6 {
+0% {
+-webkit-transform:perspective(600px) rotateX(0deg) rotateY(180deg) rotateZ(0deg);
+}
+100% {
+-webkit-transform:perspective(600px) rotateX(360deg) rotateY(540deg) rotateZ(0deg);
+}
+}*/
+
+/* for Firefox and IE10 */
+/*@keyframes animate1 {
+0% {
+transform: perspective(600px) rotateX(0deg) rotateY(90deg) rotateZ(0deg);
+}
+100% {
+transform: perspective(600px) rotateX(360deg) rotateY(450deg) rotateZ(0deg);
+}
+}
+@keyframes animate2 {
+0% {
+transform:perspective(600px) rotateX(0deg) rotateY(270deg) rotateZ(0deg);
+}
+100% {
+transform:perspective(600px) rotateX(360deg) rotateY(630deg) rotateZ(0deg);
+}
+}
+@keyframes animate3 {
+0% {
+transform:perspective(600px) rotateX(90deg) rotateY(0deg) rotateZ(0deg);
+}
+100% {
+transform:perspective(600px) rotateX(450deg) rotateY(0deg) rotateZ(-360deg);
+}
+}
+@keyframes animate4 {
+0% {
+transform:perspective(600px) rotateX(-90deg) rotateY(0deg) rotateZ(0deg);
+}
+100% {
+transform:perspective(600px) rotateX(270deg) rotateY(0deg) rotateZ(360deg);
+}
+}
+@keyframes animate5 {
+0% {
+transform:perspective(600px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+}
+100% {
+transform:perspective(600px) rotateX(360deg) rotateY(360deg) rotateZ(0deg);
+}
+}
+@keyframes animate6 {
+0% {
+transform:perspective(600px) rotateX(0deg) rotateY(180deg) rotateZ(0deg);
+}
+100% {
+transform:perspective(600px) rotateX(360deg) rotateY(540deg) rotateZ(0deg);
+}
+}*/
