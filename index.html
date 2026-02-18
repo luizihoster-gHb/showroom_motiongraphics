@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Production Preview | Multi-Size Gallery</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <style>
+        :root {
+            --bg: #050505;
+            --card-bg: #111;
+            --text: #eee;
+            --accent: #00ffcc;
+        }
+
+        body {
+            background-color: var(--bg);
+            color: var(--text);
+            font-family: 'Inter', sans-serif;
+            margin: 0; padding: 40px 20px;
+        }
+
+        .container { max-width: 1200px; margin: 0 auto; }
+        header { margin-bottom: 50px; border-left: 3px solid var(--accent); padding-left: 20px; }
+        
+        /* Grid adjusts based on content */
+        .preview-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 30px;
+        }
+
+        /* Special rule: Leaderboards take full width of the grid row */
+        .project-card.leaderboard {
+            grid-column: 1 / -1;
+        }
+
+        .project-card {
+            background: var(--card-bg);
+            border-radius: 12px;
+            overflow: hidden;
+            border: 1px solid #222;
+            display: flex;
+            flex-direction: column;
+            opacity: 0;
+            height: fit-content;
+        }
+
+        .card-header {
+            padding: 12px 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: rgba(255,255,255,0.03);
+            font-size: 0.85rem;
+        }
+
+        .type-badge {
+            font-size: 9px;
+            font-weight: 700;
+            padding: 2px 8px;
+            border-radius: 4px;
+            background: #333;
+            color: var(--accent);
+            border: 1px solid var(--accent);
+        }
+
+        .media-box {
+            width: 100%;
+            background: #000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px 0; /* Adds some breathing room around banners */
+        }
+
+         /* Responsive GIF/Image handling */
+        .media-box img {
+            max-width: 90%;
+            height: auto;
+            display: block;
+        }
+
+        /* Iframe Sizing Classes */
+        .size-300x250 { width: 300px; height: 250px; }
+        .size-300x600 { width: 300px; height: 600px; }
+        .size-728x90 { width: 728px; height: 90px; }
+
+        @media (max-width: 768px) {
+            .size-728x90 { width: 100%; height: auto; aspect-ratio: 728/90; }
+        }
+
+        iframe { border: none; overflow: hidden; background: #fff; }
+        video { width: 100%; height: 100%; display: block; }
+
+        .footer-link {
+            padding: 10px;
+            text-align: center;
+            font-size: 0.75rem;
+            color: #666;
+            text-decoration: none;
+        }
+        .footer-link:hover { color: var(--accent); }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <header>
+        <h1>MOTION GRAPHICS SHOWROOM</h1>
+        <div style="color:#666">Motion Graphics for Ad campaigns, social media by Luis Aguilar</div>
+    </header>
+
+    <div class="preview-grid" id="main-grid"></div>
+</div>
+
+<script>
+    // 1. ASSET LIST WITH SIZE DEFINITIONS
+    const assets = [
+        // masters
+        { title: "Master Unit", size: "300x250", url: "files/web_animation/index.html", format: "html" },
+        { title: "Master Unit", size: "300x250", url: "files/web_animation2/index.html", format: "html" },
+        { title: "Master Unit", size: "300x250", url: "files/web_animation3/index.html", format: "html" },
+        { title: "Master Unit", size: "300x250", url: "files/web_animation4/index.html", format: "html" },
+        { title: "Master Unit", size: "300x250", url: "files/web_animation5/index.html", format: "html" },
+        { title: "Master Unit", size: "300x250", url: "files/web_animation16/index.html", format: "html" },
+        { title: "Master Unit", size: "300x250", url: "files/web_animation14/ONME203098_03_US_DiseaseED_banner_300x250_v1.html", format: "html" },
+        { title: "Master Unit", size: "300x250", url: "files/web_animation11/Amex_Gold_Updates_300x250.html", format: "html" },
+        { title: "Master Unit", size: "300x250", url: "files/web_animation15/ENG_CHZ_COLLEGEFOOTBALL_300x250_HTML5.html", format: "html" },
+        { title: "Master Unit", size: "300x250", url: "files/web_animation10/TLSIAPBanner_300x250.html", format: "html" },
+        { title: "Master Unit", size: "300x250", url: "files/web_animation6/index.html", format: "html" },
+        { title: "Master Unit", size: "300x250", url: "files/web_animation18/index.html", format: "html" },
+        { title: "Master Unit", size: "300x250", url: "files/web_animation19/index.html", format: "html" },
+        { title: "Master Unit", size: "300x250", url: "files/web_animation20/index.html", format: "html" },
+        { title: "Master Unit", size: "300x250", url: "files/web_animation21/index.html", format: "html" },
+        //towers 
+        { title: "Tower Unit", size: "300x600", url: "files/web_animation7/index.html", format: "html" },
+        { title: "Tower Unit", size: "300x600", url: "files/web_animation8/index.html", format: "html" },
+        { title: "Tower Unit", size: "300x600", url: "files/web_animation9/index.html", format: "html" },
+        //leaderboar
+        { title: "Leaderboard Unit", size: "728x90", url: "files/web_animation22/index.html", format: "html" },
+        //GIFs
+        { title: "Animated Social Loop", type: "GIF", url: "files/GIF_01.gif", format: "gif" },
+        { title: "Animated Social Loop", type: "GIF", url: "files/GIF_02.gif", format: "gif" },
+        { title: "Animated Social Loop", type: "GIF", url: "files/GIF_03.gif", format: "gif" },
+        { title: "Animated Social Loop", type: "GIF", url: "files/GIF_04.gif", format: "gif" },
+        { title: "Animated Social Loop", type: "GIF", url: "files/GIF_05.gif", format: "gif" },
+        { title: "Animated Social Loop", type: "GIF", url: "files/GIF_06.gif", format: "gif" },
+        //videos
+        { title: "Video from Master Unit", type: "Video", url: "files/video_sample5.mp4", format: "video" },
+        { title: "Video from Master Unit", type: "Video", url: "files/video_sample7.mp4", format: "video" },
+        { title: "Video from Master Unit", type: "Video", url: "files/video_sample6.mp4", format: "video" },
+        { title: "Social Media AD", type: "Video", url: "files/video_sample9.mp4", format: "video" },
+        { title: "Social Media AD", type: "Video", url: "files/video_sample3.mp4", format: "video" },
+        { title: "Social Media AD", type: "Video", url: "files/video_sample4.mp4", format: "video" },
+        { title: "Social Media AD", type: "Video", url: "files/video_sample.mp4", format: "video" },
+        { title: "Social Media AD", type: "Video", url: "files/video_sample8.mp4", format: "video" },
+        { title: "Social Media AD", type: "Video", url: "files/video_sample2.mp4", format: "video" }
+
+    ];
+
+    const grid = document.getElementById('main-grid');
+
+    // 2. RENDER LOGIC
+    assets.forEach((item) => {
+        const card = document.createElement('div');
+        card.className = `project-card ${item.size === '728x90' ? 'leaderboard' : ''}`;
+        
+        let mediaContent = '';
+        if (item.format === 'video') {
+            mediaContent = `<video controls playsinline><source src="${item.url}"></video>`;
+        } else if (item.format === 'html') {
+            mediaContent = `<iframe src="${item.url}" class="size-${item.size}" scrolling="no"></iframe>`;
+        }
+        else if (item.format === 'gif') {
+            mediaContent = `<img src="${item.url}" alt="${item.title}">`;
+        }
+
+        card.innerHTML = `
+            <div class="card-header">
+                <strong>${item.title}</strong>
+                <span class="type-badge">${item.size || item.type}</span>
+            </div>
+            <div class="media-box">${mediaContent}</div>
+            <a href="${item.url}" target="_blank" class="footer-link">Preview Fullscreen ↗</a>
+        `;
+        grid.appendChild(card);
+    });
+
+    // 3. ENTRANCE ANIMATION
+    window.onload = () => {
+        gsap.to(".project-card", { opacity: 1, y: -10, stagger: 0.1, duration: 0.6 });
+    };
+</script>
+</body>
+</html>
