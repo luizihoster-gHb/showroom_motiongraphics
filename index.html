@@ -118,27 +118,27 @@
     // 1. ASSET LIST WITH SIZE DEFINITIONS
     const assets = [
         // masters
-        { title: "Master Unit", size: "300x250", url: "files/web_animation/index.html", format: "html" },
-        { title: "Master Unit", size: "300x250", url: "files/web_animation2/index.html", format: "html" },
-        { title: "Master Unit", size: "300x250", url: "files/web_animation3/index.html", format: "html" },
-        { title: "Master Unit", size: "300x250", url: "files/web_animation4/index.html", format: "html" },
-        { title: "Master Unit", size: "300x250", url: "files/web_animation5/index.html", format: "html" },
-        { title: "Master Unit", size: "300x250", url: "files/web_animation16/index.html", format: "html" },
-        { title: "Master Unit", size: "300x250", url: "files/web_animation14/ONME203098_03_US_DiseaseED_banner_300x250_v1.html", format: "html" },
-        { title: "Master Unit", size: "300x250", url: "files/web_animation11/Amex_Gold_Updates_300x250.html", format: "html" },
-        { title: "Master Unit", size: "300x250", url: "files/web_animation15/ENG_CHZ_COLLEGEFOOTBALL_300x250_HTML5.html", format: "html" },
-        { title: "Master Unit", size: "300x250", url: "files/web_animation10/TLSIAPBanner_300x250.html", format: "html" },
-        { title: "Master Unit", size: "300x250", url: "files/web_animation6/index.html", format: "html" },
-        { title: "Master Unit", size: "300x250", url: "files/web_animation18/index.html", format: "html" },
-        { title: "Master Unit", size: "300x250", url: "files/web_animation19/index.html", format: "html" },
-        { title: "Master Unit", size: "300x250", url: "files/web_animation20/index.html", format: "html" },
-        { title: "Master Unit", size: "300x250", url: "files/web_animation21/index.html", format: "html" },
+        { title: "Master Unit", size: "300x250", type:"HTML", url: "files/web_animation/index.html", format: "html" },
+        { title: "Master Unit", size: "300x250", type:"HTML", url: "files/web_animation2/index.html", format: "html" },
+        { title: "Master Unit", size: "300x250", type:"HTML", url: "files/web_animation3/index.html", format: "html" },
+        { title: "Master Unit", size: "300x250", type:"HTML", url: "files/web_animation4/index.html", format: "html" },
+        { title: "Master Unit", size: "300x250", type:"HTML", url: "files/web_animation5/index.html", format: "html" },
+        { title: "Master Unit", size: "300x250", type:"HTML", url: "files/web_animation16/index.html", format: "html" },
+        { title: "Master Unit", size: "300x250", type:"HTML", url: "files/web_animation14/ONME203098_03_US_DiseaseED_banner_300x250_v1.html", format: "html" },
+        { title: "Master Unit", size: "300x250", type:"HTML", url: "files/web_animation11/Amex_Gold_Updates_300x250.html", format: "html" },
+        { title: "Master Unit", size: "300x250", type:"HTML", url: "files/web_animation15/ENG_CHZ_COLLEGEFOOTBALL_300x250_HTML5.html", format: "html" },
+        { title: "Master Unit", size: "300x250", type:"HTML", url: "files/web_animation10/TLSIAPBanner_300x250.html", format: "html" },
+        { title: "Master Unit", size: "300x250", type:"HTML", url: "files/web_animation6/index.html", format: "html" },
+        { title: "Master Unit", size: "300x250", type:"HTML", url: "files/web_animation18/index.html", format: "html" },
+        { title: "Master Unit", size: "300x250", type:"HTML", url: "files/web_animation19/index.html", format: "html" },
+        { title: "Master Unit", size: "300x250", type:"HTML", url: "files/web_animation20/index.html", format: "html" },
+        { title: "Master Unit", size: "300x250", type:"HTML", url: "files/web_animation21/index.html", format: "html" },
         //towers 
-        { title: "Tower Unit", size: "300x600", url: "files/web_animation7/index.html", format: "html" },
-        { title: "Tower Unit", size: "300x600", url: "files/web_animation8/index.html", format: "html" },
-        { title: "Tower Unit", size: "300x600", url: "files/web_animation9/index.html", format: "html" },
+        { title: "Tower Unit", size: "300x600", type:"HTML", url: "files/web_animation7/index.html", format: "html" },
+        { title: "Tower Unit", size: "300x600", type:"HTML", url: "files/web_animation8/index.html", format: "html" },
+        { title: "Tower Unit", size: "300x600", type:"HTML", url: "files/web_animation9/index.html", format: "html" },
         //leaderboar
-        { title: "Leaderboard Unit", size: "728x90", url: "files/web_animation22/index.html", format: "html" },
+        { title: "Leaderboard Unit", size: "728x90", type:"HTML", url: "files/web_animation22/index.html", format: "html" },
         //GIFs
         { title: "Animated Social Loop", type: "GIF", url: "files/GIF_01.gif", format: "gif" },
         { title: "Animated Social Loop", type: "GIF", url: "files/GIF_02.gif", format: "gif" },
@@ -179,7 +179,7 @@
         card.innerHTML = `
             <div class="card-header">
                 <strong>${item.title}</strong>
-                <span class="type-badge">${item.size || item.type}</span>
+                <span class="type-badge">${item.type}</span>
             </div>
             <div class="media-box">${mediaContent}</div>
             <a href="${item.url}" target="_blank" class="footer-link">Preview Fullscreen ↗</a>
