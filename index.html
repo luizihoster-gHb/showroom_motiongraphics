@@ -55,7 +55,17 @@
             color: var(--text2);
         }
 
-        .project-card:hover { border-color: var(--accent); }
+        /* Solo se aplica la clase hover en escritorio */
+        @media (hover: hover) {
+            .project-card:hover { border-color: var(--accent); }
+        }
+
+        /* Solo se aplica en pantallas mayores a 1024px */
+        /*@media (min-width: 1024px) {
+            .project-card:hover { border-color: var(--accent); }
+        }*/
+
+        /*.project-card:hover { border-color: var(--accent); }*/
 
         .card-header {
             padding: 12px 15px;
